@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>API Project</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+
+<style>
+    #line{
+        border-left: 1px solid;
+        height: 400px;
+        left: 40%;
+        position:absolute;
+    }
+</style>
+
+<body>
+
+
+
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4">
+                <select id="recipe" class="form-control">
+                    <option value="" disabled selected>Choose Recipe</option>
+                </select>
+            </div>
+            <div class="col-4"></div>
+        </div>
+        <div class="contaimer mt-5">
+            <div class="row">
+                <div class="col-3"></div>
+                <div class="col-3">
+                    <table class="table table-borderless" id="card"></table>
+                </div>
+                <div class="col-3">
+                    <table class="table table-borderless" id="cards"></table>
+                </div>
+                <div class="col-3"></div>
+            </div>
+            <div class="row">
+                <div class="col-5">
+                    <table class="table table-borderless" id="table"></table>
+                </div>
+                <div class="col-2" id="line"></div>
+                <div class="col-5" >
+                   
+                    <table class="table table-borderless" id="instruction"></table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/Jquery_Project.js"></script>
+</body>
+
+</html>
