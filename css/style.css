@@ -4,11 +4,11 @@
     background-position:center;
 }
 
-#card-recipe{
+#card-select{
     background: url("../image/2.jpg");
 } 
 
-#card{
+#nameOfFood{
     color: orange;
 } 
 

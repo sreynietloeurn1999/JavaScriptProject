@@ -116,13 +116,13 @@ var getEachRecipe = (name, img) => {
     result += `
         <h3>${name}</h3> 
     `;
-    $('#card').html(result);
+    $('#nameOfFood').html(result);
 
     var results = "";
     results += `
         <img src="${img}" width="300" class="img-thumbnail"> 
     `;
-    $('#cards').html(results);
+    $('#imageOfFood').html(results);
 }
 
 
