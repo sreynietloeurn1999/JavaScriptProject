@@ -7,57 +7,97 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>API Project</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css ">
 </head>
 
-<style>
-    #line{
-        border-left: 1px solid;
-        height: 400px;
-        left: 40%;
-        position:absolute;
-    }
-</style>
+<body id="body">
 
-<body>
-
-
-
+    <!-- Select Food -->
 
     <div class="container mt-5">
         <div class="row">
-            <div class="col-4"></div>
-            <div class="col-4">
-                <select id="recipe" class="form-control">
-                    <option value="" disabled selected>Choose Recipe</option>
-                </select>
+            <div class="col-3"></div>
+            <div class="col-6">
+                <div class="card" id="card-recipe">
+                    <div class="card-body">
+                        <select id="recipe" class="form-control">
+                            <option value="" disabled selected>Choose Recipe</option>
+                        </select>
+                    </div>
+                </div>
             </div>
-            <div class="col-4"></div>
+            <div class="col-3"></div>
         </div>
-        <div class="contaimer mt-5">
-            <div class="row">
-                <div class="col-3"></div>
-                <div class="col-3">
-                    <table class="table table-borderless" id="card"></table>
-                </div>
-                <div class="col-3">
-                    <table class="table table-borderless" id="cards"></table>
-                </div>
-                <div class="col-3"></div>
-            </div>
-            <div class="row">
-                <div class="col-5">
-                    <table class="table table-borderless" id="table"></table>
-                </div>
-                <div class="col-2" id="line"></div>
-                <div class="col-5" >
-                   
-                    <table class="table table-borderless" id="instruction"></table>
-                </div>
 
-            </div>
-        </div>
     </div>
 
+    <h1 class="big-quote">THE WORLD OF FOODS</h1>
+    <br>
+    <br>
+
+    <!-- Title ingredient and instruction -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-3"></div>
+            <div class="col-3">
+                <h1 id="card"></h1>
+            </div>
+            <div class="col-3">
+                <h1 id="cards"></h1>
+            </div>
+            <div class="col-3"></div>
+        </div>
+
+        <!-- Button increase decrease and input box -->
+        <br>
+        <div class="row" id="increaseDecreaseGuest">
+            <div class="col-4"></div>
+            <div class="col-4">
+                <h3 class="nb-person">Number of Person</h3>
+                <br>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <button type="button" id="decrease">-</button>
+                    </div>
+                    <div id="input"></div>
+                    <div class="input-group-append">
+                        <button type="submit" id="add">+</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-4"></div>
+        </div>
+
+        <br>
+        <br>
+    </div>
+    <!-- Table to get ingredients and instructions and line -->
+    <div class="container">
+        <div class="card" id="card-form">
+            <div class="card-body">
+                <div class="row">
+
+                    <div class="col-6">
+
+                        <h4 id="ingre" class=" text-center"></h4>
+                        <br>
+                        <table class="table table-borderless " id="ingredient"></table>
+
+
+                    </div>
+                    <div class="col-6">
+                        <h4 id="instruct"></h4>
+                        <br>
+                        <table class="table table-borderless " id="instruction"></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/Jquery_Project.js"></script>
 </body>
