@@ -8,32 +8,25 @@ function getUrl() {
 $(document).ready(() => {
     requestApi();
 
-// Hid button and input
+// Hide button and input
     $('#increaseDecreaseGuest').hide();
 
-
-    $('#line').hide();
     $('#card-form').hide();
     $('.big-quote').show();
+
     // select change
     $('#recipe').on('change', function () {
-        $('#line').show();
         $('#card-form').show();
         $('.big-quote').hide();
         $('#increaseDecreaseGuest').show();
         var recipes = $('#recipe').val();
         getRecipe(recipes);
-       
-       
-
-
     });
-    // Click add number of guests
 
+    // Click add number of guests
     $('#add').on('click',function() {
         var add = $('#member').val();
-        addPerson(add);
-        
+        addPerson(add);      
     })
 
     // Click to decrease number of guests
@@ -67,22 +60,22 @@ $(document).ready(() => {
         })
     }
 
-// Request data to store in data
+// Request data to store in data variable
 function requestApi() {
     $.ajax({
         dataType: 'json',
         url: getUrl(),
-        success: (data) => chhosenRechipe(data.recipes),
+        success: (data) => chosenRechipe(data.recipes),
         error: () => console.log("Cannot get data"),
     })
 }
 
 // To get name of food in to select form
 var alldata = [];
-function chhosenRechipe(rechipe) {
-    alldata = rechipe;
+function chosenRechipe(recipe) {
+    alldata = recipe;
     var Option = "";
-    rechipe.forEach(element => {
+    recipe.forEach(element => {
         Option += `
             <option value = "${element.id}">${element.name}</option>
         `;
@@ -91,9 +84,9 @@ function chhosenRechipe(rechipe) {
 }
 
 // getRecipe
-function getRecipe(rechipeId) {
+function getRecipe(recipeID) {
     alldata.forEach(element => {
-        if (element.id == rechipeId) {
+        if (element.id == recipeID) {
             getEachRecipe(element.name, element.iconUrl);
            
             eachIngredient(element.ingredients);
